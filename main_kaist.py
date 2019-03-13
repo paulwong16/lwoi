@@ -455,7 +455,7 @@ def launch(args):
 
 	### What to do
 	args.read_data = True
-	args.train_gp_odo_fog = False
+	args.train_gp_odo_fog = True
 	args.train_gp_imu = True
 	args.post_tests = True
 
