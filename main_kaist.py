@@ -42,7 +42,7 @@ def read_data_nclt(args):
 	k = int(args.Delta_t/args.delta_t)
 	bar_dataset = progressbar.ProgressBar(max_value=len(datasets))
 	for idx_i, dataset_i in enumerate(datasets):
-		dataset_i = dataset_i[0:10]
+		# dataset_i = dataset_i[0:10]
 		print("\nDataset name: " + dataset_i)
 		path_odo, path_fog, path_imu, path_gt = set_path_nclt(args, dataset_i)
 
@@ -455,7 +455,7 @@ def launch(args):
 
 	### What to do
 	args.read_data = True
-	args.train_gp_odo_fog = True
+	args.train_gp_odo_fog = False
 	args.train_gp_imu = True
 	args.post_tests = True
 
