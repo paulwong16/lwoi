@@ -4,10 +4,10 @@ from main_kaist import launch
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser(description='GP nclt')
 	parser.add_argument('--nclt', type=bool, default=True)
-	parser.add_argument('--path_data_base', type=str, default="/media/mines/DATA/NCLT/")
-	parser.add_argument('--path_data_save', type=str, default="data/nclt/")
-	parser.add_argument('--path_results', type=str, default="results/nclt/")
-	parser.add_argument('--path_temp', type=str, default="temp/nclt/")
+	parser.add_argument('--path_data_base', type=str, default="/home/wangzhijie/Downloads/dataset/nclt/")
+	parser.add_argument('--path_data_save', type=str, default="/home/wangzhijie/Downloads/dataset/nclt/data/nclt/")
+	parser.add_argument('--path_results', type=str, default="/home/wangzhijie/Downloads/dataset/nclt/results/nclt/")
+	parser.add_argument('--path_temp', type=str, default="/home/wangzhijie/Downloads/dataset/nclt/temp/nclt/")
 
 	# data extraction
 	parser.add_argument('--y_diff_odo_fog_threshold', type=float, default=0.15)

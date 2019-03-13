@@ -9,7 +9,7 @@ from liegroups.torch import SE3, SO3
 import pickle
 from dataset import NCLTDataset, KAISTDataset
 from filter import KAISTFilter, NCLTFilter
-from plots import plot_animation, plot_and_save_traj, plot_and_save_cate
+#from plots import plot_animation, plot_and_save_traj, plot_and_save_cate
 from scipy.signal import savgol_filter
 from train import train_gp, GpOdoFog, GpImu, FNET, HNET
 
@@ -42,6 +42,7 @@ def read_data_nclt(args):
 	k = int(args.Delta_t/args.delta_t)
 	bar_dataset = progressbar.ProgressBar(max_value=len(datasets))
 	for idx_i, dataset_i in enumerate(datasets):
+		dataset_i = dataset_i[0:10]
 		print("\nDataset name: " + dataset_i)
 		path_odo, path_fog, path_imu, path_gt = set_path_nclt(args, dataset_i)
 

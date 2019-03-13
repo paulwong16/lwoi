@@ -6,10 +6,10 @@ import pyro
 import pyro.contrib.gp as gp
 import pyro.infer as infer
 import pyro.optim as optim
-from pyro.contrib.gp.util import Parameterized
+from pyro.contrib.gp.parameterized import Parameterized
 import numpy as np
 from liegroups.torch import SE3, SO3
-from utils import jacobian, MultiVariateGaussian
+from utils import jacobian #, MultiVariateGaussian
 pyro.enable_validation(True)
 
 # batch matrix vector multiplication
